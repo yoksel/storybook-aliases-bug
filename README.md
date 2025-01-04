@@ -1,4 +1,4 @@
-I'm trying to mock modules using aliases https://storybook.js.org/docs/get-started/frameworks/nextjs?renderer=react#with-module-aliases and it does not work
+I'm trying to mock modules using overriding [`tsconfig` aliases](https://nextjs.org/docs/app/getting-started/installation#set-up-absolute-imports-and-module-path-aliases) in [.storybook/main.ts](https://storybook.js.org/docs/get-started/frameworks/nextjs?renderer=react#with-module-aliases) and it does not work
 
 How to reproduce:
 

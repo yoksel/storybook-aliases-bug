@@ -30,9 +30,6 @@ const config: StorybookConfig = {
         // DOES NOT WORK
         // — we can NOT see replacement in TestComponent story
         // — if we provide broken path instead of real mock file, Storybook build won't fail because all these aliases replacements actually ignored
-        '@/src/util/testModule$': path.resolve(__dirname, './mocks/testModule.ts'),
-        '@/src/util/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
-        '@/src/util': path.resolve(__dirname, './mocks/testModule.ts'),
         '@/util': path.resolve(__dirname, './mocks/testModule.ts'),
         '@/util/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
         '@/util/testModule$': path.resolve(__dirname, './mocks/testModule.ts'),
