@@ -3,7 +3,7 @@ I'm trying to mock modules using overriding [`tsconfig` aliases](https://nextjs.
 How to reproduce:
 
 1. Install dependencies: `npm i`
-1. Run Storybook: `yarn storybook`
+1. Run Storybook: `npm run storybook`
 1. Open Storybook and check component `TestComponent`: http://localhost:6007/?path=/story/components-testcomponent--default
 1. See `Real content` was not replaced by `MOCKED content` despite of rewriting aliases in `.storybook/main.ts`.
 
