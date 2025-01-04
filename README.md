@@ -1,8 +1,22 @@
 I'm trying to mock modules using aliases https://storybook.js.org/docs/get-started/frameworks/nextjs?renderer=react#with-module-aliases and it does not work
 
+How to reproduce:
+
+1. Install dependencies: `npm i`
+1. Run Storybook: `yarn storybook`
+1. Open Storybook and check component `TestComponent`: http://localhost:6007/?path=/story/components-testcomponent--default
+1. See `Real content` was not replaced by `MOCKED content` despite of rewriting aliases in `.storybook/main.ts`.
+
+We also can provide broken paths instead of real mocks like:
+
+```
+'@/testModule': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
+```
+
+And if aliases work, Storybook build should fail, but it does not, so replacing aliases for Storybook does not work.
+
 * See `tsconfig.json` for TS aliases
 * See `.storybook/main.ts` for aliases used in stories
-
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 

@@ -4,12 +4,12 @@ import { testModule as testModule2 } from '@/src/util/testModule';
 import { testModule as testModule3 } from '@/util/testModule';
 import { testModule as testModule4 } from '@/testModule';
 
-const TestComponent = () => {
+const TestComponent = ({id}:{id: string}) => {
   return (
     <>
       {/* To check that changing aliases at least works */}
       <div>
-        <b>nanoid:</b> {nanoid()}
+        <b>nanoid:</b> {id ?? nanoid()}
       </div>
       {/* Modules are imported different ways and I'm trying to mock them in storybook */}
       <div>

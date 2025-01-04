@@ -28,16 +28,16 @@ const config: StorybookConfig = {
         // WORKS — we can see replacement in TestComponent story
         '../../util/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
         // DOES NOT WORK
-        // — BROKEN_PATH is used intentionally: if module will be requested, storybook build should fail (but it does not)
-        // — if we use correct path, replacement in TestComponent story won't work anyway
-        '@/src/util/testModule$': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/src/util/testModule': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/src/util': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/util': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/util/testModule': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/util/testModule$': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/testModule': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
-        '@/testModule$': path.resolve(__dirname, './mocks/BROKEN_PATH.ts'),
+        // — we can NOT see replacement in TestComponent story
+        // — if we provide broken path instead of real mock file, Storybook build won't fail because all these aliases replacements actually ignored
+        '@/src/util/testModule$': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/src/util/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/src/util': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/util': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/util/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/util/testModule$': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/testModule': path.resolve(__dirname, './mocks/testModule.ts'),
+        '@/testModule$': path.resolve(__dirname, './mocks/testModule.ts'),
       };
     }
 
