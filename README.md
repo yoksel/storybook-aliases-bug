@@ -15,8 +15,8 @@ We also can provide broken paths instead of real mocks like:
 
 And if aliases work, Storybook build should fail, but it does not, so replacing aliases for Storybook does not work.
 
-* See [`tsconfig.json`](./tsconfig.json) for TS aliases
-* See [`.storybook/main.ts`](./.storybook/main.ts) for aliases used in stories
+* See [`tsconfig.json`](./tsconfig.json#L17-L20) for TS aliases
+* See [`.storybook/main.ts`](./.storybook/main.ts#L21-L38) for aliases used in stories
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
